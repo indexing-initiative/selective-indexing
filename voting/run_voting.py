@@ -33,7 +33,7 @@ def run_model(X, y, model, dataset):
             'pmid': X['pmid'],
             'journal': X['journals']
             })
-    df_results.to_csv("..\\results\\{}_voting_predictions.csv".format(dataset), sep=",", index=None)
+    df_results.to_csv("../results/{}_voting_predictions.csv".format(dataset), sep=",", index=None)
 
 
 def preprocess_json_data(citations):
@@ -95,9 +95,9 @@ def main():
     datasets = ["validation", "test"]
     for dataset in datasets:
         if dataset == "validation":
-            XML_path = "..\\datasets\\pipeline_validation_set.json"
+            XML_path = "../datasets/pipeline_validation_set.json"
         else:
-            XML_path = "..\\datasets\\pipeline_test_set"
+            XML_path = "../datasets/pipeline_test_set"
 
         citations = parse_citations(XML_path)
         X, y = preprocess_json_data(citations)
