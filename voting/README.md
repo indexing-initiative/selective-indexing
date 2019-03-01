@@ -11,6 +11,6 @@ bash run_voting.sh
 ```
 if on linux.
 
-This will save a joblib file and generate a set of predictions
+This will save a voting_model.joblib file and generate a set of predictions
 from the test and validation datasets. The predictions will be stored in the 
 results directory. The ensemble will be saved in the current directory.  
