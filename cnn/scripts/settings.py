@@ -10,11 +10,10 @@ def get_config():
         # Machine specific
         'root_dir' : '****',
         # Year specific
-        'year' : 2018,
         'data_filename_template' : 'pubmed18n{0:04d}',
-        'url_template' : 'ftp://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/{data_filename_template}.xml.gz',
+        'url_template' : 'https://mbr.nlm.nih.gov/Download/Baselines/2018/{data_filename_template}.xml.gz',
         'start_data_file_num' : 1, 
-        'end_data_file_num': 1250,
+        'end_data_file_num': 928,
         'medline_citation_node_path': 'PubmedArticle/MedlineCitation',
         
         # Shared

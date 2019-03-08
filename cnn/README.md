@@ -17,7 +17,7 @@ source activate selective_indexing
 ## Creating the required folder structure
 
 \root-dir
-    -
+    - downloaded-data
 
 ## Creating the MySQL database
 
