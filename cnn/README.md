@@ -21,4 +21,9 @@ source activate selective_indexing
 
 ## Creating the MySQL database
 
+1. Download the MEDLINE baseline
+```
+python download_medline_data.py
+```
+
 
