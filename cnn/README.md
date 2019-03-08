@@ -19,15 +19,21 @@ source activate selective_indexing
 <!-- language: lang-none -->
     \root-dir
         - downloaded-data
+        - extracted-data
     
 ## Creating the MySQL database
 
 The scripts to create the MySQL database are in the cnn/scripts folder
 
 1. Enter the root directory of the created folder structure in the settings.py file (directory should not end with a forward slash)
-2. Download the MEDLINE baseline
+2. Download the MEDLINE baseline (TODO: how to share daily update files)
 ```
 python download_medline_data.py
 ```
+3. Extract required data from baseline files
+```
+python extract_data.py
+```
+
 
 
