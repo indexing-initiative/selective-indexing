@@ -30,6 +30,7 @@ The scripts to create the MySQL database are in the cnn/scripts folder
 ```
 python download_medline_data.py
 ```
+
 3. Extract required data from baseline files
 ```
 python extract_data.py

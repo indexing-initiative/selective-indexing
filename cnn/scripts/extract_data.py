@@ -36,7 +36,7 @@ def _article_is_relevant(article_metadata):
                      journal_nlmid and \
                      pub_year and \
                      date_completed and \
-                     medline_or_pubmed and \
+                     medline_or_pubmed
     return should_extract
 
 
