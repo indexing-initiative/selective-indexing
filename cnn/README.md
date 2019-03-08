@@ -14,6 +14,11 @@ To train the CNN from scratch, we first need to create the selective indexing da
 conda create --name selective_indexing --file requirements.txt
 source activate selective_indexing
 ```
+## Creating the required folder structure
+
+\root-dir
+    -
+
 ## Creating the MySQL database
 
 

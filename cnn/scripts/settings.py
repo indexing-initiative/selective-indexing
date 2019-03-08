@@ -1,11 +1,10 @@
 def get_config():
 
-    baseline_dir = '{root_dir}/****/'
-    baseline_year_dir = baseline_dir + '/{year:04d}'
-    extracted_data_dir =  baseline_year_dir + '/selective-indexing-extracted-data-v3'
-    preprocessed_dir = baseline_year_dir + '/preprocessed'
+    downloaded_data_dir =  '{root_dir}/downloaded-data'
+    extracted_data_dir =  '{root_dir}/extracted-data'
+    preprocessed_dir = '{root_dir}/preprocessed'
     selective_indexing_dir = preprocessed_dir + '/selective-indexing'
-    cross_val_dir = baseline_year_dir + '/cross-validation/selective-indexing'
+    cross_val_dir = '{root_dir}/cross-validation/selective-indexing'
 
     config = {
         # Machine specific
@@ -21,9 +20,9 @@ def get_config():
         # Shared
         'encoding' : 'utf8',
 
-        'data_filepath_template': baseline_year_dir + '/{data_filename_template}.xml.gz',
+        'data_filepath_template': downloaded_data_dir + '/{data_filename_template}.xml.gz',
 
-        'serials_file': baseline_year_dir + '/lsi2018.xml',
+        'serials_file': '{root_dir}/lsi2018.xml',
         'reporting_journals_file': selective_indexing_dir + '/selectively-indexed-journals-of-interest.csv',
 
         'selective_indexing_periods_output_file': selective_indexing_dir + '/selective_indexing_periods_output.txt',
@@ -34,7 +33,7 @@ def get_config():
         'json_filepath_template': extracted_data_dir + '/{data_filename_template}.json.gz',
         'extract_data_log_file':  extracted_data_dir + '/extract_data_log.txt',
 
-        'journals_filepath':  baseline_dir + '/J_Medline.txt',
+        'journals_filepath': '{root_dir}/J_Medline.txt',
       
         'database': { 'user': '****', 'database': '****', 'password': '****', 'charset': 'utf8mb4', 'collation': 'utf8mb4_unicode_ci', 'use_unicode': True },
         'max_abs_len': 13000,
