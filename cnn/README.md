@@ -33,6 +33,10 @@ run the create_empty_database.sql script
 
 ## Prepopulate database tables
 
+```
+python populate_ref_types_table.py
+```
+
 ## Load citation data
 
 The scripts to create and load data into the MySQL database are in the cnn/scripts folder
