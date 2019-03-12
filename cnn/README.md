@@ -33,6 +33,8 @@ run the create_empty_database.sql script
 
 ## Prepopulate database tables
 
+Configure database username and password in the settings file
+
 ```
 python populate_ref_types_table.py
 ```
