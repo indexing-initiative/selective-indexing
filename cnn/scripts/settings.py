@@ -34,7 +34,7 @@ def get_config():
 
         'journals_filepath': '{root_dir}/J_Medline.txt',
       
-        'database': { 'user': '****', 'database': 'selective_indexing_2018', 'password': '****', 'charset': 'utf8mb4', 'collation': 'utf8mb4_unicode_ci', 'use_unicode': True },
+        'database': { 'host': '****', 'user': '****', 'database': 'selective_indexing_2018', 'password': '****', 'charset': 'utf8mb4', 'collation': 'utf8mb4_unicode_ci', 'use_unicode': True },
         'max_abs_len': 13000,
         'load_data_log_file': extracted_data_dir + '/load_data_log.txt',
 

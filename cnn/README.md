@@ -23,6 +23,7 @@ source activate selective_indexing
 
 ## Extracting journal indexing periods
 
+
 ## Creating the database
 
 The scripts to create and load data into the MySQL database are in the cnn/scripts folder
@@ -33,7 +34,7 @@ run the create_empty_database.sql script
 
 ## Prepopulate database tables
 
-Configure database username and password in the settings file
+Configure database host, user and password in the settings file.
 
 ```
 python populate_ref_types_table.py
