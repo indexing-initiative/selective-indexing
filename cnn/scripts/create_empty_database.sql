@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `****` DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
-USE `****`;
+CREATE DATABASE IF NOT EXISTS `selective_indexing_2018` DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
+USE `selective_indexing_2018`;
 
 
 DROP TABLE IF EXISTS `ref_types`;

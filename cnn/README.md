@@ -20,10 +20,22 @@ source activate selective_indexing
     \root-dir
         - downloaded-data
         - extracted-data
-    
-## Creating the MySQL database
 
-The scripts to create the MySQL database are in the cnn/scripts folder
+## Extracting journal indexing periods
+
+## Creating the database
+
+The scripts to create and load data into the MySQL database are in the cnn/scripts folder
+    
+## Creating the database schema
+
+run the create_empty_database.sql script
+
+## Prepopulate database tables
+
+## Load citation data
+
+The scripts to create and load data into the MySQL database are in the cnn/scripts folder
 
 1. Enter the root directory of the created folder structure in the settings.py file (directory should not end with a forward slash)
 2. Download the MEDLINE baseline (TODO: how to share daily update files)
