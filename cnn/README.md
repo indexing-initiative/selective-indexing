@@ -39,6 +39,9 @@ Configure database host, user and password in the settings file.
 ```
 python populate_ref_types_table.py
 ```
+```
+python populate_journal_groups_table.py
+```
 
 ## Load citation data
 
