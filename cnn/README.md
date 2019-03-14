@@ -25,7 +25,11 @@ source activate selective_indexing
 
 ## Extracting journal indexing periods
 
+Copy _aux/lsi2018.xml to root-dir/lsi2018.xml
 
+```
+python extract_journal_indexing_periods.py
+```
 ## Creating the database
 
 The scripts to create and load data into the MySQL database are in the cnn/scripts folder
