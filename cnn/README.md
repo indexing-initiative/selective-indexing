@@ -38,6 +38,8 @@ The _aux/selective_indexing_periods.csv file contains data for the journal_index
 ## Creating the database
 
 The scripts to create and load data into the MySQL database are in the cnn/scripts folder
+
+First, enter the root directory of the created folder structure in the settings.py file (directory should not end with a forward slash)
     
 ## Creating the database schema
 
@@ -64,23 +66,18 @@ Copy _aux/selective_indexing_periods_input.csv to root-dir/preprocessed/selectiv
 ```
 python populate_journal_indexing_periods_table.py
 ```
-
-
 ## Load article data
 
-The scripts to create and load data into the MySQL database are in the cnn/scripts folder
-
-1. Enter the root directory of the created folder structure in the settings.py file (directory should not end with a forward slash)
-2. Download the MEDLINE baseline 
+1. Download the MEDLINE baseline 
 ```
 python download_medline_data.py
 ```
-3. Copy January - September 2018 daily update files (TODO: how to share daily update files) to root-dir/downloaded-data
-4. Extract required data from baseline files
+2. Copy January - September 2018 daily update files (TODO: how to share daily update files) to root-dir/downloaded-data
+3. Extract required data from baseline files
 ```
 python extract_data.py
 ```
-5. Load article data into the database
+4. Load article data into the database
 ```
 python load_data.py
 ```
