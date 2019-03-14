@@ -66,19 +66,23 @@ python populate_journal_indexing_periods_table.py
 ```
 
 
-## Load citation data
+## Load article data
 
 The scripts to create and load data into the MySQL database are in the cnn/scripts folder
 
 1. Enter the root directory of the created folder structure in the settings.py file (directory should not end with a forward slash)
-2. Download the MEDLINE baseline (TODO: how to share daily update files)
+2. Download the MEDLINE baseline 
 ```
 python download_medline_data.py
 ```
-
-3. Extract required data from baseline files
+3. Copy January - September 2018 daily update files (TODO: how to share daily update files) to root-dir/downloaded-data
+4. Extract required data from baseline files
 ```
 python extract_data.py
+```
+5. Load article data into the database
+```
+python load_data.py
 ```
 
 
