@@ -11,12 +11,12 @@ INSERT_SQL = 'INSERT INTO journal_indexing_periods (journal_id, citation_subset,
 
 def run(config):
     SELECTIVE_INDEXING_PERIODS_FILEPATH = config['selective_indexing_periods_input_file']
-    FULL_INDEXING_PERIODS_FILEPATH = config['full_indexing_periods_input_file']
+    #FULL_INDEXING_PERIODS_FILEPATH = config['full_indexing_periods_input_file']
     ENCODING = config['encoding']
     DB_CONFIG = config['database']
   
     selective_indexing_periods = load_indexing_periods(SELECTIVE_INDEXING_PERIODS_FILEPATH, ENCODING, False)
-    full_indexing_periods = load_indexing_periods(FULL_INDEXING_PERIODS_FILEPATH, ENCODING, True)
+    #full_indexing_periods = load_indexing_periods(FULL_INDEXING_PERIODS_FILEPATH, ENCODING, True)
     full_indexing_periods = {}
     journal_id_lookup = create_id_lookup(DB_CONFIG, SELECT_ALL_JOURNALS_SQL)
 
