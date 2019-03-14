@@ -20,6 +20,8 @@ source activate selective_indexing
     \root-dir
         - downloaded-data
         - extracted-data
+        \preprocessed
+            - selective-indexing
 
 ## Extracting journal indexing periods
 
@@ -41,6 +43,13 @@ python populate_ref_types_table.py
 ```
 ```
 python populate_journal_groups_table.py
+```
+
+Copy _aux/J_Medline.txt to root-dir/J_Medline.txt
+
+Copy _aux/selectively_indexed_journal_groups.csv to root-dir/preprocessed/selective-indexing/selectively_indexed_journal_groups.csv
+```
+python populate_journals_table.py
 ```
 
 ## Load citation data
