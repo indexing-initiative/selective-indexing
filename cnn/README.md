@@ -30,6 +30,11 @@ Copy _aux/lsi2018.xml to root-dir/lsi2018.xml
 ```
 python extract_journal_indexing_periods.py
 ```
+
+The output file of interest is root-dir/preprocessed/selective-indexing/selective_indexing_periods_output.txt. The file contains values delimited by |. All the data is extracted from the lsi2018.xml file. The start and end years of selective indexing are extracted from the Coverage element in the indexing history.
+
+The _aux/selective_indexing_periods.csv file contains data for the journal_indexing_periods table in the database. It is created from the selective_indexing_periods_output.txt file, which we just generated. The CSV file has four columns: the journal NLM id, the citation subset, the start year of selective indexing, and the end year of selective indexing (-1 if currently indexed). Some of the start/end years of selective indexing are modified based on the text in the CoverageNote element of the lsi2018.xml file.
+
 ## Creating the database
 
 The scripts to create and load data into the MySQL database are in the cnn/scripts folder
