@@ -60,6 +60,11 @@ Copy _aux/selectively_indexed_journal_groups.csv to root-dir/preprocessed/select
 ```
 python populate_journals_table.py
 ```
+Copy _aux/selective_indexing_periods_input.csv to root-dir/preprocessed/selective-indexing/selective_indexing_periods_input.csv
+```
+python populate_journal_indexing_periods_table.csv
+```
+
 
 ## Load citation data
 
