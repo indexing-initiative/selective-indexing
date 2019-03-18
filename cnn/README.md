@@ -89,5 +89,7 @@ python load_data.py
 python create_crossvalidation_sets.py
 ```
 
-The train, validation, and test sets are created in the root-dir/preprocessed/cross-validation directory. Note that we call the validation sets: "dev sets". The dev set contains articles from all years, while the target dev set only contains articles from 2018.
+The train, validation, and test sets are created in the root-dir/preprocessed/cross-validation directory. Note that we call the validation sets: "dev sets". The "dev set" contains articles from all years, while the "target dev set" only contains articles from 2018.
+
+Due to the size of the database; this script may take a long time to run.
 
