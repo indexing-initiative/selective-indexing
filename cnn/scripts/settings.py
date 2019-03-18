@@ -4,7 +4,7 @@ def get_config():
     extracted_data_dir =  '{root_dir}/extracted-data'
     preprocessed_dir = '{root_dir}/preprocessed'
     selective_indexing_dir = preprocessed_dir + '/selective-indexing'
-    cross_val_dir = '{root_dir}/cross-validation/selective-indexing'
+    cross_val_dir =  preprocessed_dir + '/cross-validation'
 
     config = {
         # Machine specific
@@ -54,8 +54,8 @@ def get_config():
         'dev_set_size' : 15000,
         'train_set_size' : 1000000000,
    
-        'cross_val_use_existing' : True,
-        'cross_val_group_num' : 5,
+        'cross_val_use_existing' : False,
+        'cross_val_group_num' : 1,
        
         'test_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_test_set_{test_set_start_year:04d}-{test_set_end_year:04d}.txt',
         'reporting_test_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_reporting_test_set_{test_set_start_year:04d}-{test_set_end_year:04d}.txt', 
@@ -96,25 +96,3 @@ def get_config():
 
 def _format(config, key):
     config[key] = config[key].format(**config)
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-  

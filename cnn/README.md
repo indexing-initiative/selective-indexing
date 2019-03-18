@@ -22,6 +22,7 @@ source activate selective_indexing
         - extracted-data
         \preprocessed
             - selective-indexing
+            - cross-validation
 
 ## Extracting journal indexing periods
 
@@ -82,5 +83,11 @@ python extract_data.py
 python load_data.py
 ```
 
+## Create train, validation, and test sets
 
+```
+python create_crossvalidation_sets.py
+```
+
+The train, validation, and test sets are created in the root-dir/preprocessed/cross-validation directory. Note that we call the validation sets: "dev sets". The dev set contains articles from all years, while the target dev set only contains articles from 2018.
 
