@@ -2,8 +2,8 @@ from collections import defaultdict
 from contextlib import closing
 from datetime import datetime as dt
 from itertools import islice
-from keras.preprocessing.sequence import pad_sequences
-from keras.utils import Sequence
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.utils import Sequence
 import math
 from mysql.connector import connect
 import numpy as np

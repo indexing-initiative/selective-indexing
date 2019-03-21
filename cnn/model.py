@@ -1,10 +1,10 @@
-import keras.backend as K
-from keras.callbacks import Callback, CSVLogger, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, TensorBoard, TerminateOnNaN
-from keras.layers import Activation, BatchNormalization, Concatenate, Conv1D, Dense, Dropout, Embedding, Flatten, Input, Layer, MaxPooling1D
-from keras.losses import binary_crossentropy
-import keras.models
-from keras.optimizers import Adam
-from keras.utils import plot_model
+import tensorflow.keras.backend as K
+from tensorflow.keras.callbacks import Callback, CSVLogger, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, TensorBoard, TerminateOnNaN
+from tensorflow.keras.layers import Activation, BatchNormalization, Concatenate, Conv1D, Dense, Dropout, Embedding, Flatten, Input, Layer, MaxPooling1D
+from tensorflow.keras.losses import binary_crossentropy
+import tensorflow.keras.models
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.utils import plot_model
 import numpy as np
 from operator import itemgetter
 from os import mkdir
