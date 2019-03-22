@@ -158,7 +158,7 @@ class _ModelConfig(_ConfigBase):
 class _PreprocessingConfig(_ConfigBase):
     def _initialize(self, machine_config):
 
-        self.word_index_lookup_path = os_path.join(machine_config.data_dir, 'preprocessed/vocab/selective-indexing/cross_val_group_5_word_index_lookup.pkl') # indices start from 2
+        self.word_index_lookup_path = os_path.join(machine_config.data_dir, 'preprocessed/vocab/selective-indexing/cross_val_group_1_word_index_lookup.pkl') # indices start from 2
         self.unknown_index = 1
         self.padding_index = 0
         self.title_max_words = 64
