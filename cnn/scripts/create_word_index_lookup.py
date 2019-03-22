@@ -10,7 +10,7 @@ from settings import get_config
 
 def run(config):
     ENCODING = config['encoding']
-    TRAIN_SET_IDS_FILEPATH = config['train_set_ids_file']
+    TRAIN_SET_IDS_FILEPATH = config['cleaned_train_set_ids_file']
     DB_CONFIG = config['database']
     WORD_INDEX_LOOKUP_FILEPATH = config['word_index_lookup_file']
 

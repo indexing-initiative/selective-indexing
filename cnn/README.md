@@ -23,6 +23,7 @@ source activate selective_indexing
         \preprocessed
             - selective-indexing
             - cross-validation
+            - vocab
 
 ## Extracting journal indexing periods
 
@@ -115,3 +116,10 @@ This test set only contains articles from selectively indexed journals of intere
 python create_reporting_test_set.py
 ```
 
+## Create the vocabulary
+
+This step creates a dictionary of word-index mappings.
+
+```
+python create_word_index_lookup.py
+```

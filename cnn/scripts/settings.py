@@ -66,7 +66,7 @@ def get_config():
         'train_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_train_set_{train_set_start_year:04d}-{train_set_end_year:04d}.txt',
         'cleaned_train_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_cleaned_train_set_{train_set_start_year:04d}-{train_set_end_year:04d}.txt',
 
-        'word_index_lookup_file' : preprocessed_dir + '/vocab/selective-indexing/cross_val_group_{cross_val_group_num}_word_index_lookup.pkl',
+        'word_index_lookup_file' : preprocessed_dir + '/vocab/cross_val_group_{cross_val_group_num}_word_index_lookup.pkl',
         'journal_groups_file': selective_indexing_dir + '/selectively_indexed_journal_groups.csv'
         }
 
