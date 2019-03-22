@@ -120,6 +120,12 @@ python create_reporting_test_set.py
 
 This step creates a dictionary of word-index mappings.
 
+1. You may first need to download the supporting data for the NLTK tokenizer. In a Python REPL run:
+```
+import nltk
+nltk.download('punkt')
+```
+2. Next run:
 ```
 python create_word_index_lookup.py
 ```
