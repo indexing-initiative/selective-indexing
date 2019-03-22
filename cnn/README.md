@@ -104,3 +104,14 @@ As mentioned in the paper, some journals are known to have problematic determina
 python clean_dev_and_train_sets.py
 ```
 
+## Create final reporting test set
+
+This test set only contains articles from selectively indexed journals of interest.
+
+1. Copy the _aux/selectively-indexed-journals-of-interest.csv file to root-dir/preprocessed/selective-indexing/selectively-indexed-journals-of-interest.csv
+
+2. Run:
+```
+python create_reporting_test_set.py
+```
+
