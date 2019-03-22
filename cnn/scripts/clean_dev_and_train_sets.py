@@ -3,7 +3,7 @@ from helper import load_delimited_data, load_ids_from_file, random_permutation, 
 from mysql.connector import connect
 from settings import get_config
 
-SELECT_ARTICLE_DATA_SQL = 'SELECT j.nlm_id, a.pub_year FROM articles AS a, journals AS j WHERE a.journal_id = j.id AND a.id = %(id)s'
+SELECT_ARTICLE_DATA_SQL = 'SELECT j.nlmid, a.pub_year FROM articles AS a, journals AS j WHERE a.journal_id = j.id AND a.id = %(id)s'
 YEAR_PROBLEM_FIXED = 2014
 
 def run(config):
