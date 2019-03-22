@@ -9,7 +9,7 @@ INSERT_JOURNAL_SQL = 'INSERT INTO journals (id, nlmid, medline_ta, group_id) VAL
 
 
 def run(config):
-    JOURNALS_FILEPATH = config['journals_filepath']
+    JOURNALS_FILEPATH = config['journals_file']
     ENCODING = config['encoding']
     JOURNAL_GROUPS_FILEPATH = config['journal_groups_file']
     DB_CONFIG = config['database']

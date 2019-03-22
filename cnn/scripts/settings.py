@@ -33,7 +33,8 @@ def get_config():
         'json_filepath_template': extracted_data_dir + '/{data_filename_template}.json.gz',
         'extract_data_log_file':  extracted_data_dir + '/extract_data_log.txt',
 
-        'journals_filepath': '{root_dir}/J_Medline.txt',
+        'journals_file': '{root_dir}/J_Medline.txt',
+        'problematic_journals_file': selective_indexing_dir + '/problematic_journals.csv',
       
         'database': { 'host': '****', 'user': '****', 'database': 'selective_indexing_2018', 'password': '****', 'charset': 'utf8mb4', 'collation': 'utf8mb4_unicode_ci', 'use_unicode': True },
         'max_abs_len': 13000,
@@ -61,7 +62,9 @@ def get_config():
         'reporting_test_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_reporting_test_set_{test_set_start_year:04d}-{test_set_end_year:04d}.txt', 
         'target_dev_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_target_dev_set_{target_dev_set_start_year:04d}-{target_dev_set_end_year:04d}.txt',
         'dev_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_dev_set_{dev_set_start_year:04d}-{dev_set_end_year:04d}.txt',
+        'cleaned_dev_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_cleaned_dev_set_{dev_set_start_year:04d}-{dev_set_end_year:04d}.txt',
         'train_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_train_set_{train_set_start_year:04d}-{train_set_end_year:04d}.txt',
+        'cleaned_train_set_ids_file' : cross_val_dir + '/group_{cross_val_group_num}_cleaned_train_set_{train_set_start_year:04d}-{train_set_end_year:04d}.txt',
 
         'word_index_lookup_file' : preprocessed_dir + '/vocab/selective-indexing/cross_val_group_{cross_val_group_num}_word_index_lookup.pkl',
         'journal_groups_file': selective_indexing_dir + '/selectively_indexed_journal_groups.csv'
@@ -80,14 +83,17 @@ def get_config():
     _format(config, 'selective_indexing_periods_input_file')
     _format(config, 'full_indexing_periods_input_file')
 
-    _format(config, 'journals_filepath')
+    _format(config, 'journals_file')
+    _format(config, 'problematic_journals_file')
     _format(config, 'load_data_log_file')
 
     _format(config, 'test_set_ids_file')
     _format(config, 'reporting_test_set_ids_file')
     _format(config, 'target_dev_set_ids_file')
     _format(config, 'dev_set_ids_file')
+    _format(config, 'cleaned_dev_set_ids_file')
     _format(config, 'train_set_ids_file')
+    _format(config, 'cleaned_train_set_ids_file')
 
     _format(config, 'word_index_lookup_file')
     _format(config, 'journal_groups_file')
