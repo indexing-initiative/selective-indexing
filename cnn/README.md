@@ -93,3 +93,14 @@ The train, validation, and test sets are created in the root-dir/preprocessed/cr
 
 Due to the size of the database; this script may take a long time to run.
 
+## Clean train and dev sets
+
+As mentioned in the paper, some journals are known to have problematic determinations before 2015. To remove this data from the train and dev sets:
+
+1. Copy the _aux/problematic_journals.csv file to root-dir/preprocessed/selective-indexing/problematic_journals.csv
+
+2. Run the following Python script:
+```
+python clean_dev_and_train_sets.py
+```
+
