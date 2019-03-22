@@ -51,7 +51,7 @@ class _CrossValidationConfig(_ConfigBase):
     def _initialize(self, machine_config):
         self.train_set_ids_path = os_path.join(machine_config.data_dir, 'preprocessed/cross-validation/group_1_train_set_1809-2018.txt')
         self.dev_set_ids_path = os_path.join(machine_config.data_dir, 'preprocessed/cross-validation/group_1_target_dev_set_2018-2018.txt')
-        self.test_set_ids_path = os_path.join(machine_config.data_dir, 'preprocessed/cross-validation/group_1_test_set_2018-2018.txt')
+        self.test_set_ids_path = os_path.join(machine_config.data_dir, 'preprocessed/cross-validation/group_1_reporting_test_set_2018-2018.txt')
         self.encoding = ENCODING
         self.train_limit = machine_config.train_limit
         self.dev_limit = machine_config.dev_limit
