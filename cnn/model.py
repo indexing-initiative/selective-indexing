@@ -187,14 +187,14 @@ class Model:
             model_json_filepath = os_path.join(input_dir, restore_config.model_json_filename)
             with open(model_json_filepath, 'rt', encoding=restore_config.encoding) as model_json_file:
                 model_json = model_json_file.read()
-            self._model = keras.models.model_from_json(model_json, custom_objects=custom_objects)
+            self._model = tensorflow.keras.models.model_from_json(model_json, custom_objects=custom_objects)
             self._model.load_weights(checkpoint_path)
             self._model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
         else:
             for metric in metrics:
                 custom_objects[metric.__name__] = metric
             custom_objects[loss.__name__] = loss
-            self._model = keras.models.load_model(checkpoint_path, custom_objects=custom_objects)
+            self._model = tensorflow.keras.models.load_model(checkpoint_path, custom_objects=custom_objects)
 
     def evaluate(self, eval_config, test_data, output_dir = None):
         metrics_names = self._model.metrics_names
