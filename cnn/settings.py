@@ -158,7 +158,7 @@ class _ModelConfig(_ConfigBase):
 class _PreprocessingConfig(_ConfigBase):
     def _initialize(self, machine_config):
 
-        self.word_index_lookup_path = os_path.join(machine_config.data_dir, 'preprocessed/vocab/selective-indexing/cross_val_group_1_word_index_lookup.pkl') # indices start from 2
+        self.word_index_lookup_path = os_path.join(machine_config.data_dir, 'preprocessed/vocab/cross_val_group_1_word_index_lookup.pkl') # indices start from 2
         self.unknown_index = 1
         self.padding_index = 0
         self.title_max_words = 64
@@ -194,13 +194,13 @@ class _RestoreConfig(_ConfigBase):
      def _initialize(self, machine_config):
         super()._initialize(machine_config)
          
-        self.sub_dir = '1540579395'
+        self.sub_dir = '****'
         self.model_json_filename = 'model.json'
         self.encoding = ENCODING
         self.model_checkpoint_dir = 'checkpoints'
         self.model_checkpoint_filename = 'best_model.hdf5'
         self.weights_only_checkpoint = True
-        self.threshold = 0.48
+        self.threshold = 0.5
         self.learning_rate = 0.001
         
 
@@ -248,7 +248,7 @@ class _PredictConfig(_RestoreConfig, _ProcessingConfig):
         self.results_filename = 'predictions.csv'
         self.dereferenced_filename = 'dereferenced_predictions.csv'
         self.metrics_filename_template = 'metrics{}.csv'
-        self.journal_groups_filepath = os_path.join(machine_config.data_dir, 'preprocessed/selective-indexing/selectively_indexed_journal_groups_v2.csv') 
+        self.journal_groups_filepath = os_path.join(machine_config.data_dir, 'preprocessed/selective-indexing/selectively_indexed_journal_groups.csv') 
         self.encoding = ENCODING
         self.delimiter = ','
         self.batch_size = 128
