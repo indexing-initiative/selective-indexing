@@ -44,7 +44,7 @@ class Model:
 
         output = Dense(model_config.output_layer_size, activation=model_config.output_layer_act)(hidden)
 
-        model = keras.models.Model(inputs=[title_input, abstract_input, pub_year_input, year_completed_input, journal_input], outputs=[output])
+        model = tensorflow.keras.models.Model(inputs=[title_input, abstract_input, pub_year_input, year_completed_input, journal_input], outputs=[output])
 
         loss, optimizer, metrics = self._get_compile_inputs(model_config.init_learning_rate, model_config.init_threshold) 
         model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
