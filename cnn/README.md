@@ -33,6 +33,8 @@ source activate selective_indexing
 
 ## 3) Extracting journal indexing periods
 
+The scripts for steps 3-6 are in the cnn/scripts folder.
+
 Copy _aux/lsi2018.xml to root-dir/lsi2018.xml
 
 ```
@@ -45,8 +47,6 @@ The _aux/selective_indexing_periods.csv file contains data for the journal_index
 
 ## 4) Creating the database
 
-The scripts to create and load data into the MySQL database are in the cnn/scripts folder.
-
 First, enter the root directory of the created folder structure in the cnn/scripts/settings.py file (directory should not end with a forward slash).
     
 ### a) Create the database schema
@@ -55,7 +55,7 @@ run the create_empty_database.sql script.
 
 ### b) Prepopulate database tables
 
-Configure the database host, user and password in the settings file.
+Configure the database host, user and password in the cnn/scripts/settings.py  file.
 
 ```
 python populate_ref_types_table.py
@@ -103,6 +103,7 @@ python load_data.py
 
 ## 5) Create train, validation, and test sets
 
+
 ### a) Create the datasets
 
 ```
@@ -125,7 +126,7 @@ python clean_dev_and_train_sets.py
 
 ### c) Create final reporting test set
 
-This test set only contains articles from selectively indexed journals of interest.
+This test set only contains articles from selectively indexed journals of interest to NLM indexers.
 
 Copy the _aux/selectively-indexed-journals-of-interest.csv file to root-dir/preprocessed/selective-indexing/selectively-indexed-journals-of-interest.csv
 
@@ -135,7 +136,7 @@ python create_reporting_test_set.py
 
 ## 6) Create the vocabulary
 
-This step creates a dictionary of word-index mappings.
+This step creates a dictionary of word to index mappings.
 
 You may first need to download the supporting data for the NLTK tokenizer. In a Python REPL run:
 
@@ -152,7 +153,7 @@ python create_word_index_lookup.py
 
 ## 7) Training the model
 
-The scripts to train and evaluate the CNN model are in the ./cnn folder.
+The scripts to train and test the CNN model are in the ./cnn folder.
 
 In the machine_settings.py file set the data_dir, database_host, and runs_dir values. The data_dir should be the root directory that was created earlier.
 
