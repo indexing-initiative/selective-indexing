@@ -244,6 +244,7 @@ class _PredictConfig(_RestoreConfig, _ProcessingConfig):
     def _initialize(self, machine_config):
         super()._initialize(machine_config)
 
+        self.pmids_filepath = '../pipeline_validation_set.json'
         self.results_dir = 'predictions'
         self.results_filename = 'predictions.csv'
         self.dereferenced_filename = 'dereferenced_predictions.csv'

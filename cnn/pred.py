@@ -26,13 +26,11 @@ def create_id_lookup(db_config, sql):
 def predict(config, input_dir):
     with ExitStack() as stack:
 
-        cross_val_cfg = config.cross_val
         preprocessing_cfg = config.inputs.preprocessing
         database_cfg = config.database
         pred_cfg = config.pred
     
-        #test_set_ids = load_db_ids(cross_val_cfg.test_set_ids_path, cross_val_cfg.encoding, cross_val_cfg.test_limit)
-        pmids = [doc['pmid'] for doc in json.load(open('/****/reporting_test_set.json', 'rt', encoding='utf8'))]
+        pmids = [doc['pmid'] for doc in json.load(open(pred_cfg.pmids_filepath, 'rt', encoding=pred_cfg.encoding))]
         id_lookup = create_id_lookup(database_cfg.config, 'SELECT id, pmid from articles')
         test_set_ids = [id_lookup[pmid] for pmid in pmids]
 
