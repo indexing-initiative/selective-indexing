@@ -169,14 +169,16 @@ The training output will be saved in the previously specified runs_dir (machine_
 
 i. In the cnn/settings.py file update the sub_dir field of the restore config to the name of the folder containing the training output (e.g. 1553531627). Also update the threshold field to the optimum threshold determined during training (see output-dir/logs/best_epoch_logs.txt - val_threshold).
 
-ii. Next, set the pmids_filepath field of the pred config to the full/relative path of the datasets/pipeline_validation_set.json file. Then run:
+ii. Next, set the pmids_filepath field of the pred config to the full/relative path of the datasets/pipeline_validation_set.json file. Also change the results_dir field to predictions_val. Then run:
 
 ```
 python pred.py
 ```
 
-ii. Finally, set the pmids_filepath field of the pred config to the full/relative path of the datasets/pipeline_test_set.json file. Then run:
+iii. Finally, set the pmids_filepath field of the pred config to the full/relative path of the datasets/pipeline_test_set.json file. Also change the results_dir field to predictions_test. Then run:
 
 ```
 python pred.py
 ```
+
+Two additional folders (predictions_val and predictions_test) will now have been created in the training output folder. These folders contain dereferenced_predictions.csv files that contain the model predictions for the pipeline validation and test sets. 
