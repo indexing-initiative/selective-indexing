@@ -6,7 +6,6 @@ for selective indexing system
 from multiprocessing import cpu_count, Pool
 import pandas as pd
 import numpy as np
-from sqlalchemy import create_engine
 
 from sklearn.externals import joblib
 from sklearn.pipeline import Pipeline, FeatureUnion
