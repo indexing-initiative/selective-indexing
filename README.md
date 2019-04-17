@@ -4,6 +4,8 @@ This repository contains the code, datasets, and trained models required to repr
 
 The list of selectively indexed NLM journal IDs that are of interest to NLM indexer can be downloaded from ./_aux/selectively-indexed-journals-of-interest.csv
 
+Large files (including pretrained models and MEDLINE daily update files) are made available using GitHub releases.
+
 To reproduce the paper results from scratch you need to:
 
 1. Train the voting ensemble model. See the README file in the voting folder for instructions.

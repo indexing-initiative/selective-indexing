@@ -87,7 +87,7 @@ i. Download the MEDLINE baseline
 python download_medline_data.py
 ```
 
-ii. Copy January - September 2018 daily update files (TODO: how to share daily update files) to root-dir/downloaded-data
+ii. Copy Novemeber 2017 - September 2018 daily update files (#929-#1250) to root-dir/downloaded-data. These files can be downloaded with the GitHub releases.
 
 iii. Extract required data from baseline files
 
