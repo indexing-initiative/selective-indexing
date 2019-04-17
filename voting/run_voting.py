@@ -97,7 +97,7 @@ def main():
         if dataset == "validation":
             XML_path = "../datasets/pipeline_validation_set.json"
         else:
-            XML_path = "../datasets/pipeline_test_set"
+            XML_path = "../datasets/pipeline_test_set.json"
 
         citations = parse_citations(XML_path)
         X, y = preprocess_json_data(citations)
